@@ -61,6 +61,7 @@ export const AboutStyle = styled.div<Props>`
         #img {
             width: 50%;
             display: flex;
+            align-items: center;
 
         }
         
