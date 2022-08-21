@@ -59,10 +59,6 @@ export const AboutStyle = styled.div<Props>`
             justify-content: center;
         }
 
-        img {
-            height: 100%;
-        }
-
         #img {
             width: 50%;
         }
