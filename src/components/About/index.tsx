@@ -39,7 +39,7 @@ export const About = () => {
         scColor={state.secColor.secColorName as string}
         id='About'>
           <h1>{aboutText}</h1>
-          <div data-aos="fade-right" id="container" >
+          <div data-aos="fade-up" id="container" >
             <div id="img"><img src="images/photo.png" alt=""/></div>
             <div id="text"><p>{paragraph}</p></div>
           </div>

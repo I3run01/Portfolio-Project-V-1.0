@@ -34,7 +34,6 @@ export const AboutStyle = styled.div<Props>`
     img {
         width: 100%;
         opacity: 80%;
-        z-index: -1;
         -webkit-box-shadow: 25px 26px 17px -15px -2px #ABFF99; 
         box-shadow: 25px 26px 17px -15px ${props => props.scColor};   
         border-radius: 20px;
@@ -61,6 +60,8 @@ export const AboutStyle = styled.div<Props>`
 
         #img {
             width: 50%;
+            display: flex;
+
         }
         
         #text {
