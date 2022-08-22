@@ -5,7 +5,7 @@ import { SkillStyle } from "./style"
 export const MySkills = () => {
 
     const {state, dispatch} = useContext(Context)
-    const [skillsText, setSkillsText] = useState<string>(state.language.language == 'English' ? 'Skills' : 'Habilidade')
+    const [skillsText, setSkillsText] = useState<string>(state.language.language == 'English' ? 'Skill' : 'Habilidade')
 
     useEffect(() => {
         setSkillsText(state.language.language == 'English' ? 'Skills' : 'Habilidades')
