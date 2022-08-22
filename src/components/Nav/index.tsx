@@ -126,7 +126,7 @@ export const Nav  = () => {
                 className={`MenuScroll ${menuStatus}`}>
                 <div><a href='#start'>{textStart}</a></div>
                 <div><a href='#About'>{textAbout}</a></div>
-                <div><a href='#'>{textSkills}</a></div>
+                <div><a href='#Skills'>{textSkills}</a></div>
                 <div><a href='#'>{textProjects}</a></div>
                 <div onClick={ChangeTheme}>
                     <Link to='#'>{textTheme}<br /> <span>{textChangeTheme}</span>  </Link></div>

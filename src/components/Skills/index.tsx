@@ -12,8 +12,8 @@ export const MySkills = () => {
     }, [state.language.language ])
 
     return (
-
         <SkillStyle
+        id="Skills"
         theme={state.theme.status}
         scColor={state.secColor.secColorName as string}>
             <h1>{skillsText}</h1>
