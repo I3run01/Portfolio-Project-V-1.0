@@ -6,7 +6,6 @@ type Props = {
 }
 
 export const AboutStyle = styled.div<Props>`
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Dirt&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@300&family=Rubik+Dirt&display=swap');
      
     min-height: 100vh;
@@ -78,9 +77,5 @@ export const AboutStyle = styled.div<Props>`
                 line-height: 1.5em;
             }
         }
-
-
-
-        
     }
 `
