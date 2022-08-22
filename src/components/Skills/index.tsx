@@ -11,6 +11,18 @@ export const MySkills = () => {
         setSkillsText(state.language.language == 'English' ? 'Skills' : 'Habilidades')
     }, [state.language.language ])
 
+    const skills = [
+        //Level is 1 to 5
+        {name: 'TypeScript', Level: 4},
+        {name: 'React.JS', Level: 3},
+        {name: 'Node.JS', Level: 2},
+        {name: 'Python', Level: 3},
+        {name: 'AdonisJS', Level: 2},
+        {name: 'PHP', level: 2},
+        {name: 'MuSQL', level: 2},
+        {name: 'MongoBD', level: 2}
+    ]
+
     return (
         <SkillStyle
         id="Skills"
