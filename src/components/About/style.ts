@@ -47,6 +47,25 @@ export const AboutStyle = styled.div<Props>`
         text-align: justify;
     }
 
+    #curriculum {
+        margin-top: 80px;
+    }
+
+    a {
+        font-family: 'Open Sans', sans-serif;
+        text-decoration: none;
+        font-size: 1.5em;
+        border: ${props => props.theme == 'dark' ? 'white' : 'black'} solid 2px;
+        border-radius: 20px;
+        padding: 5px 20px 5px 20px;
+        color: ${props => props.theme == 'dark' ? 'white' : 'black'};
+        
+        :hover {
+            background-color: ${props => props.scColor};
+        }
+
+    }
+
     @media(min-width: 1050px) {
         h1 {
             font-size: 5em;

@@ -17,15 +17,24 @@ export const About = () => {
     const [aboutText, setAboutText] = useState<string>(state.language.language == 'English' ? 
     'About me': 'Sobre mim')
 
+    const [curriculun, setCurriculun] = useState<string>(state.language.language == 'Englihs' ? '/Curriculum/CurriculumEng.pdf' : '/Curriculum/CurriculumPort.pdf')
+
+    const [curriculumText, setCurriculumText] = useState<string>(state.language.language == 'English' ? 'Download CV' : 'Baixar CV')
+
     
 
     useEffect(() => {
         if(state.language.language == 'English') {
           setParagraph(ParagraphENG)
           setAboutText('About me')
+          setCurriculun('/Curriculum/CurriculumEng.pdf')
+          setCurriculumText('Download CV')
+          
         }else {
           setParagraph(ParagraphPTBR)
           setAboutText('Sobre mim')
+          setCurriculun('/Curriculum/CurriculumPort.pdf')
+          setCurriculumText('Baixar CV')
         }
     }, [state.language.language])
 
@@ -39,9 +48,12 @@ export const About = () => {
         scColor={state.secColor.secColorName as string}
         id='About'>
           <h1>{aboutText}</h1>
-          <div data-aos="fade-up" id="container" >
+          <div /*data-aos="fade-up"*/ id="container" >
             <div id="img"><img src="images/photo.png" alt=""/></div>
             <div id="text"><p>{paragraph}</p></div>
+          </div>
+          <div id="curriculum">
+            <a  /*data-aos="fade-up"*/ href={curriculun} target={'__blank'}>{curriculumText}</a>
           </div>
         </AboutStyle>
     )
