@@ -31,7 +31,7 @@ export const  ContactMeBTN = () => {
                 <hr className={`line02 ${opened}02 ${hoverContactMe}`}/>
                 
                 <div className={`IconLinkedin ${opened}IconLinkedin`}>
-                    <a href="www.linkedin.com/in/I3run01" target={"_blank"} title="Linkedin">
+                    <a href="https://www.linkedin.com/in/i3run01/" target={"_blank"} title="Linkedin">
                         <LinkedInIcon
                             hoverColor={state.secColor.secColorName as string}/>
                     </a> 
