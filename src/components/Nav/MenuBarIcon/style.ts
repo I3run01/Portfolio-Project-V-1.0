@@ -9,6 +9,10 @@ export const MenuBarStyle = styled.div<Props>`
 
   border: 2px solid transparent;
   width: 40px;
+  background: rgba(255, 255, 255, 0.0);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   :hover {
     cursor: pointer;
@@ -22,16 +26,17 @@ export const MenuBarStyle = styled.div<Props>`
   }
 
   hr {
-    height: 4px;
-    width: 40px;
+    height: 3px;
+    width: 38px;
     background-color: ${props => props.theme == 'dark' ? 'white' : 'black'};
     margin-left: 0;
     transition: all 0.5s ease-in-out;
-    border: none;
+    border: 1px solid rgba(255, 255, 255, 1);
     margin-bottom: 0;
     border-radius: 80px;
     -webkit-box-shadow: 4px 0px 18px 3px rgba(0,0,0,0.21); 
     box-shadow: 4px 0px 18px 3px rgba(0,0,0,0.21)
+    
   }
 
   .opened02 {
@@ -40,11 +45,15 @@ export const MenuBarStyle = styled.div<Props>`
   }
 
   .opened01 {
-    transform: rotate(45deg) translateY(11px) translateX(6px);
+    width: 40px;
+    transform: rotate(45deg) translateY(10px) translateX(8px);
+    border: 1px solid rgba(255, 255, 255, 1);
   }
 
   .opened03 {
-    transform: rotate(-45deg) translateY(-11px) translateX(6px);
+    width: 40px;
+    transform: rotate(-45deg) translateY(-10px) translateX(8px);
+    border: 1px solid rgba(255, 255, 255, 1);
   }
 
   .In {

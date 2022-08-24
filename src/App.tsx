@@ -3,6 +3,7 @@ import { ContactMeBTN } from "./components/contactMeBTN"
 import { Introduction } from "./components/Introduction"
 import { About } from "./components/About"
 import { MySkills } from "./components/Skills"
+import { Project } from "./components/Projects"
 import { Footer } from "./components/Footer"
 import * as GS from './GlobalStyle'
 import { Context } from './contexts/Context'
@@ -20,6 +21,9 @@ function App() {
         <GS.ParagraphDiv>
           <About></About>
           <MySkills></MySkills>
+          <Project 
+          titleENGUSA='Projects'
+          titlePTBR= 'Projetos'/>
         </GS.ParagraphDiv>
         <Footer></Footer>
     </GS.MainDiv>

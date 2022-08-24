@@ -9,11 +9,31 @@ type Props = {
 export const ContactMeBtnStyle = styled.div<Props>`
     z-index: 10;
 
+    
+
     #container {
         width: 12vw;
         height: 5vh;
         position: relative;
         cursor: pointer;
+
+        .Background {
+            transform: translateY(-100%);
+            top: 2.5vh;
+            left: -1vw;
+            position: absolute;
+            width: 15vw;
+            height: 0vh; 
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .BackgroundOpen {
+            height: 38vh; 
+        }
     }
 
     hr {
@@ -27,6 +47,7 @@ export const ContactMeBtnStyle = styled.div<Props>`
         -webkit-box-shadow: 11px 13px 24px 2px rgba(0,0,0,0.48); 
         box-shadow: 11px 13px 24px 2px rgba(0,0,0,0.48);
         transition: all 0.5s ease-in-out;
+        
     }
 
     .line02 {
@@ -37,6 +58,7 @@ export const ContactMeBtnStyle = styled.div<Props>`
         position: absolute;
         transform: scale(0%);
         transition: all 0.5s ease-in-out;
+        z-index: +1;
 
         right: 0vw;
         svg {

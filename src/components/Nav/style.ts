@@ -18,12 +18,13 @@ export const NavSS = styled.nav<Props>`
         align-items: center;
         height: 0vh;
         width: 60vw;
-        background-color: ${props => props.theme == 'dark' ? '#171717' : '#fffefa'};
-        opacity: 90%;
+        background: rgba(255, 255, 255, 0.10);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         border: 0px solid ${props => props.hoverColor};
         overflow-y: hidden;
         transition: all 0.5s ease-out;
-        box-shadow: 5px 12px 9px 5px rgba(0,0,0,0.0);
         text-align: center;
         
         

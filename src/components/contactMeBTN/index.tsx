@@ -11,11 +11,18 @@ export const  ContactMeBTN = () => {
     const {state, dispatch} = useContext(Context)
     const [opened, setOpened] = useState('Closed')
     const [hoverContactMe, setHoverContactMe] = useState('notHover')
+    const [backgorund, setBackground] = useState('backGroundNotOpen')
 
     const OpenMenu = () => {
 
-        if(opened == 'Opened') setOpened('Closed')
-        else setOpened('Opened')
+        if(opened == 'Opened') {
+            setOpened('Closed')
+            setBackground('backGroundNotOpen')
+        }
+        else {
+            setOpened('Opened')
+            setBackground('BackgroundOpen')
+        }
     }
 
     return (
@@ -27,6 +34,9 @@ export const  ContactMeBTN = () => {
             onMouseEnter={() => {setHoverContactMe('hoverContactMe')}}
             onMouseLeave={() => {setHoverContactMe('notHover')}}>
             <div id="container">
+
+                <div className={`Background ${backgorund}`}></div>
+
                 <hr className={`line01 ${opened}01 ${hoverContactMe}`}/>
                 <hr className={`line02 ${opened}02 ${hoverContactMe}`}/>
                 
