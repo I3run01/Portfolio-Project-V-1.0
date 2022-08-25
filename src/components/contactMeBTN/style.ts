@@ -9,8 +9,6 @@ type Props = {
 export const ContactMeBtnStyle = styled.div<Props>`
     z-index: 10;
 
-    
-
     #container {
         width: 12vw;
         height: 5vh;
@@ -26,8 +24,8 @@ export const ContactMeBtnStyle = styled.div<Props>`
             height: 0vh; 
             background: rgba(255, 255, 255, 0.10);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
             transition: all 0.5s ease-in-out;
         }
 
@@ -114,6 +112,19 @@ export const ContactMeBtnStyle = styled.div<Props>`
             position: relative;
             height: 50px;
             width: 50px;
+
+            .Background {
+                width: 64px;
+                top: 25px;
+                left: -7px;
+                height: 0;
+
+                transition: all 0.5s ease-in-out;
+            }
+
+            .BackgroundOpen {
+                height: 220px;
+            }
         }
 
         hr {
@@ -124,7 +135,11 @@ export const ContactMeBtnStyle = styled.div<Props>`
             padding: 2px;
         }
 
+        
+
         //After animation
+
+        
 
         .Opened01 {
             width: 60px;
