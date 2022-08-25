@@ -8,7 +8,7 @@ type Props = {
 export const NavSS = styled.nav<Props>`
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Dirt&display=swap');
     margin-left: 2vw;
-    z-index: 1;
+    z-index: 2;
     
 
     .MenuScroll {
@@ -26,9 +26,6 @@ export const NavSS = styled.nav<Props>`
         overflow-y: hidden;
         transition: all 0.5s ease-out;
         text-align: center;
-        
-        
-
     }
 
     
