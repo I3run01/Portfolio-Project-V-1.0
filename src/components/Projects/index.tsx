@@ -55,7 +55,7 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
         id='About'>
           <h1>{projectText}</h1>
           <div data-aos="fade-up" id="container">
-            <div className="img">
+            <div id="img">
               <NextProjectIcon/>
               <BackProjectIcon/>
               <img className="nextSlide" src="images/photo.png" alt=""/>

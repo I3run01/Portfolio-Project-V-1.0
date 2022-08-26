@@ -30,7 +30,7 @@ export const ProjectStyle = styled.div<Props>`
 
     }
 
-    .img {
+    #img {
         position: relative;
         height: 600px;
 
@@ -83,7 +83,7 @@ export const ProjectStyle = styled.div<Props>`
     }
 
     .nextSlide {
-        
+
             animation-name: nextProjectAnimation;
             animation-duration: 1s;
 
@@ -138,7 +138,7 @@ export const ProjectStyle = styled.div<Props>`
             justify-content: center;
         }
 
-        .img {
+        #img {
             width: 50%;
             display: flex;
             align-items: center;
