@@ -32,7 +32,7 @@ export const ProjectStyle = styled.div<Props>`
 
     #img {
         position: relative;
-        height: 600px;
+        min-height: 60vw;
 
         #NextProjectIcon {
             position: absolute;
@@ -90,15 +90,40 @@ export const ProjectStyle = styled.div<Props>`
             @keyframes nextProjectAnimation {
                 0% {
                     position: absolute;
+                    right: 0px;
+                    opacity: 100%;
+                } 49% {
+                    position: absolute;
+                    right: 500px;
+                    opacity: 0;
+                } 50% {
+                    position: absolute;
+                    right: -500px;
+                    opacity: 0;
+                } 100% {
+                    position: absolute;
+                    right: 0px;
+                    opacity: 100%;
+                }
+            }
+    }
+
+    .backSlide {
+        animation-name: backProjectAnimation;
+        animation-duration: 1s;
+
+        @keyframes backProjectAnimation {
+            0% {
+                    position: absolute;
                     left: 0px;
                     opacity: 100%;
                 } 49% {
                     position: absolute;
-                    left: 300px;
+                    left: 500px;
                     opacity: 0;
                 } 50% {
                     position: absolute;
-                    left: -300px;
+                    left: -500px;
                     opacity: 0;
                 } 100% {
                     position: absolute;

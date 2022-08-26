@@ -17,6 +17,7 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
     const [projectText, setProjectText] = useState<string>(state.language.language == 'English' ? 
     titleENGUSA: titlePTBR)
 
+    const [changeSlide, setChangeSlide] = useState<string>('none')
 
     useEffect(() => {
         if(state.language.language == 'English') {
@@ -31,6 +32,17 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
       AOS.init({duration: 1500});
     }, [])
 
+    const nextSlideFunction = () => {
+      setChangeSlide('nextSlide')
+      setTimeout(() => {setChangeSlide('none')}, 1000);
+    }
+
+    const backSlideFunction = () => {
+      setChangeSlide('backSlide')
+      setTimeout(() => {setChangeSlide('none')}, 1000);
+    }
+ 
+    //Projects
     const projects = [
       {
         EnglishTitle: 'dnv',
@@ -53,12 +65,12 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
         theme={state.theme.status}
         scColor={state.secColor.secColorName as string}
         id='About'>
-          <h1>{projectText}</h1>
+          <h1 onClick={nextSlideFunction} >{projectText}</h1>
           <div data-aos="fade-up" id="container">
             <div id="img">
-              <NextProjectIcon/>
-              <BackProjectIcon/>
-              <img className="nextSlide" src="images/photo.png" alt=""/>
+              <NextProjectIcon handleChangeSlide={nextSlideFunction}/>
+              <BackProjectIcon handleChangeSlide={backSlideFunction}/>
+              <img className={changeSlide} src="images/photo.png" alt=""/>
             </div>
             <div id="text">
               <h2>Project Name</h2>

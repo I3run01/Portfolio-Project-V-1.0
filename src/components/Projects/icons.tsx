@@ -1,7 +1,12 @@
-export const NextProjectIcon = () => {
+type Props = {
+    handleChangeSlide: () => void
+}
+
+export const NextProjectIcon = ({handleChangeSlide}: Props) => {
 
     return (
         <svg 
+            onClick={handleChangeSlide}
             id="NextProjectIcon"
             xmlns="http://www.w3.org/2000/svg" version="1.0" width="700pt" height="40pt" viewBox="0 0 791.000000 1167.000000" preserveAspectRatio="xMidYMid meet">
 
@@ -48,10 +53,11 @@ export const NextProjectIcon = () => {
     )
 }
 
-export const BackProjectIcon = () => {
+export const BackProjectIcon = ({handleChangeSlide}: Props) => {
 
     return (
         <svg
+            onClick={handleChangeSlide}
             id='BackProjectIcon'
             xmlns="http://www.w3.org/2000/svg" version="1.0" width="1280.000000pt" height="40pt" viewBox="0 0 1280.000000 1888.000000" preserveAspectRatio="xMidYMid meet">
             <metadata>
