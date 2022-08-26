@@ -12,19 +12,42 @@ type Props = {
 }
 
 export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
+        //Projects
+        const projects = [
+          {
+            EnglishTitle: 'BMI Project',
+            PortugueseTitle: 'Projeto de IMC',
+            EnglishText: 'This project was a challenge for b7web. In this project, I made a BMI calculator. You put your weight and height and the project will give you your BMI. If you are too slim, normal, or overweight.',
+            PortugueseText: 'Portuguese Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error facere quam praesentium obcaecati possimus modi laudantium id eos animi aperiam libero aspernatur aliquam doloremque, ipsam quaerat ratione dolorem sint?',
+            Img: 'images/ProjectsImages/BMICalculator.png'      
+          },
+          {
+            EnglishTitle: 'dnv',
+            PortugueseTitle: 'sfdansf',
+            EnglishText: 'This project was a challenge for b7web. In this project, I made a BMI calculator. You put your weight and height and the project will give you your BMI. it shows If you are too slim, normal, or overweight.',
+            PortugueseText: 'Esse projeto foi um desafio do b7web, consiste em uma cálculadora de IMC, ela mostra se você está muito magro, normal ou com sobrepeso.',
+            Img: 'kdjfoeu'      
+          },
+        ]
+
+    //Constants
     const {state, dispatch} = useContext(Context)
 
-    const [projectText, setProjectText] = useState<string>(state.language.language == 'English' ? 
+    const [title, setTitle] = useState<string>(state.language.language == 'English' ? 
     titleENGUSA: titlePTBR)
 
     const [changeSlide, setChangeSlide] = useState<string>('none')
 
+    const [index, setIndex] = useState<number>(0)
+
+    const [projectName, setProjectName] = useState<string>(projects[index].EnglishTitle)
+
     useEffect(() => {
         if(state.language.language == 'English') {
-          setProjectText(titleENGUSA)
+          setTitle(titleENGUSA)
           
         }else {
-          setProjectText(titlePTBR)
+          setTitle(titlePTBR)
         }
     }, [state.language.language])
 
@@ -42,35 +65,19 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
       setTimeout(() => {setChangeSlide('none')}, 1000);
     }
  
-    //Projects
-    const projects = [
-      {
-        EnglishTitle: 'dnv',
-        PortugueseTitle: 'sfdansf',
-        EnglishText: 'English Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error facere quam praesentium obcaecati possimus modi laudantium id eos animi aperiam libero aspernatur aliquam doloremque, ipsam quaerat ratione dolorem sint?',
-        PortugueseText: 'Portuguese Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error facere quam praesentium obcaecati possimus modi laudantium id eos animi aperiam libero aspernatur aliquam doloremque, ipsam quaerat ratione dolorem sint?',
-        Img: 'kdjfoeu'      
-      },
-      {
-        EnglishTitle: 'dnv',
-        PortugueseTitle: 'sfdansf',
-        EnglishText: 'English Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error facere quam praesentium obcaecati possimus modi laudantium id eos animi aperiam libero aspernatur aliquam doloremque, ipsam quaerat ratione dolorem sint?',
-        PortugueseText: 'Portuguese Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error facere quam praesentium obcaecati possimus modi laudantium id eos animi aperiam libero aspernatur aliquam doloremque, ipsam quaerat ratione dolorem sint?',
-        Img: 'kdjfoeu'      
-      },
-    ]
+
 
     return (
         <ProjectStyle
         theme={state.theme.status}
         scColor={state.secColor.secColorName as string}
         id='About'>
-          <h1 onClick={nextSlideFunction} >{projectText}</h1>
+          <h1 onClick={nextSlideFunction} >{title}</h1>
           <div data-aos="fade-up" id="container">
             <div id="img">
               <NextProjectIcon handleChangeSlide={nextSlideFunction}/>
               <BackProjectIcon handleChangeSlide={backSlideFunction}/>
-              <img className={changeSlide} src="images/photo.png" alt=""/>
+              <img className={changeSlide} src={projects[index].Img} alt=""/>
             </div>
             <div id="text">
               <h2>Project Name</h2>
