@@ -30,24 +30,9 @@ export const ProjectStyle = styled.div<Props>`
 
     }
 
-    #img {
+    .img {
         position: relative;
         height: 600px;
-
-        img {
-            position: relative;
-            
-            width: 100%;
-            opacity: 80%;
-            -webkit-box-shadow: 25px 26px 17px -15px -2px #ABFF99; 
-            box-shadow: 25px 26px 17px -15px ${props => props.scColor};   
-            border-radius: 20px;
-
-            :active {
-                animation-name: nextProjectAnimation;
-                animation-duration: 4s;
-            }
-        }
 
         #NextProjectIcon {
             position: absolute;
@@ -62,31 +47,20 @@ export const ProjectStyle = styled.div<Props>`
             -webkit-backdrop-filter: blur(0px);
             border: 1px solid rgba(255, 255, 255, 1);
             
-            :hover {
-                
+            :hover {    
                 cursor: pointer;
             }
 
             
+        }
 
-            @keyframes nextProjectAnimation {
-                0% {
-                    position: absolute;
-                    left: 0px;
-                } 49% {
-                    position: absolute;
-                    left: 300px;
-                    opacity: 0;
-                } 50% {
-                    position: absolute;
-                    left: -300px;
-                    opacity: 0;
-                }
-                100% {
-                    position: absolute;
-                    left: 0px;
-                }
-            }
+        img {
+            position: relative;
+            width: 100%;
+            opacity: 80%;
+            -webkit-box-shadow: 25px 26px 17px -15px -2px #ABFF99; 
+            box-shadow: 25px 26px 17px -15px ${props => props.scColor};   
+            border-radius: 20px;
         }
 
         #BackProjectIcon {
@@ -106,6 +80,33 @@ export const ProjectStyle = styled.div<Props>`
                 cursor: pointer;
             }
         }
+    }
+
+    .nextSlide {
+            :active {
+                animation-name: nextProjectAnimation;
+                animation-duration: 1s;
+            }
+
+            @keyframes nextProjectAnimation {
+                0% {
+                    position: absolute;
+                    left: 0px;
+                    opacity: 100%;
+                } 49% {
+                    position: absolute;
+                    left: 300px;
+                    opacity: 0;
+                } 50% {
+                    position: absolute;
+                    left: -300px;
+                    opacity: 0;
+                } 100% {
+                    position: absolute;
+                    left: 0px;
+                    opacity: 100%;
+                }
+            }
     }
     
     #text {
@@ -138,9 +139,8 @@ export const ProjectStyle = styled.div<Props>`
             justify-content: center;
         }
 
-        #img {
+        .img {
             width: 50%;
-            height: 600px;
             display: flex;
             align-items: center;
 
