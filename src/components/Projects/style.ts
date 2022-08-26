@@ -83,7 +83,6 @@ export const ProjectStyle = styled.div<Props>`
     }
 
     .nextSlide {
-
             animation-name: nextProjectAnimation;
             animation-duration: 1s;
 
