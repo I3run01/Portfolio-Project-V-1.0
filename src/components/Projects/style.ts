@@ -83,10 +83,9 @@ export const ProjectStyle = styled.div<Props>`
     }
 
     .nextSlide {
-            :active {
-                animation-name: nextProjectAnimation;
-                animation-duration: 1s;
-            }
+        
+            animation-name: nextProjectAnimation;
+            animation-duration: 1s;
 
             @keyframes nextProjectAnimation {
                 0% {
