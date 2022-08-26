@@ -32,9 +32,16 @@ export const ProjectStyle = styled.div<Props>`
 
     #img {
         position: relative;
+        height: 600px;
 
         img {
             position: relative;
+            
+            width: 100%;
+            opacity: 80%;
+            -webkit-box-shadow: 25px 26px 17px -15px -2px #ABFF99; 
+            box-shadow: 25px 26px 17px -15px ${props => props.scColor};   
+            border-radius: 20px;
 
             :active {
                 animation-name: nextProjectAnimation;
@@ -66,10 +73,14 @@ export const ProjectStyle = styled.div<Props>`
                 0% {
                     position: absolute;
                     left: 0px;
-                }
-                50% {
+                } 49% {
                     position: absolute;
                     left: 300px;
+                    opacity: 0;
+                } 50% {
+                    position: absolute;
+                    left: -300px;
+                    opacity: 0;
                 }
                 100% {
                     position: absolute;
@@ -95,14 +106,6 @@ export const ProjectStyle = styled.div<Props>`
                 cursor: pointer;
             }
         }
-    }
-
-    img {
-        width: 100%;
-        opacity: 80%;
-        -webkit-box-shadow: 25px 26px 17px -15px -2px #ABFF99; 
-        box-shadow: 25px 26px 17px -15px ${props => props.scColor};   
-        border-radius: 20px;
     }
     
     #text {
@@ -137,6 +140,7 @@ export const ProjectStyle = styled.div<Props>`
 
         #img {
             width: 50%;
+            height: 600px;
             display: flex;
             align-items: center;
 
