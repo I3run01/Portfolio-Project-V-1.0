@@ -33,6 +33,15 @@ export const ProjectStyle = styled.div<Props>`
     #img {
         position: relative;
 
+        img {
+            position: relative;
+
+            :active {
+                animation-name: nextProjectAnimation;
+                animation-duration: 4s;
+            }
+        }
+
         #NextProjectIcon {
             position: absolute;
             transform:translateY(-50%);
@@ -49,6 +58,23 @@ export const ProjectStyle = styled.div<Props>`
             :hover {
                 
                 cursor: pointer;
+            }
+
+            
+
+            @keyframes nextProjectAnimation {
+                0% {
+                    position: absolute;
+                    left: 0px;
+                }
+                50% {
+                    position: absolute;
+                    left: 300px;
+                }
+                100% {
+                    position: absolute;
+                    left: 0px;
+                }
             }
         }
 
