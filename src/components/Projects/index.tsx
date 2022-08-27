@@ -18,8 +18,10 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
             EnglishTitle: 'BMI Project',
             PortugueseTitle: 'Projeto de IMC',
             EnglishText: 'This project was a challenge for b7web. In this project, I made a BMI calculator. You put your weight and height and the project will give you your BMI. If you are too slim, normal, or overweight.',
-            PortugueseText: 'Portuguese Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error facere quam praesentium obcaecati possimus modi laudantium id eos animi aperiam libero aspernatur aliquam doloremque, ipsam quaerat ratione dolorem sint?',
-            Img: 'images/ProjectsImages/BMICalculator.png'      
+            PortugueseText: 'Esse projeto foi um desafio do b7web, consiste em uma cálculadora de IMC, ela mostra se você está muito magro, normal ou com sobrepeso.',
+            Img: 'images/ProjectsImages/BMICalculator.png',
+            Deploy: 'https://i3run01bmiproject.netlify.app',
+            Github: 'https://github.com/I3run01/Projeto_Calculo_IMC'
           },
           {
             EnglishTitle: 'dnv',
@@ -44,14 +46,24 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
 
     const [ProjectText, setProjectText] = useState<string>(state.language.language == 'English' ? projects[index].EnglishText : projects[index].PortugueseText)
 
+    const [seeProject, setSeeProject] = useState<string>(state.language.language == 'English' ? 'see the project' : 'ver o projeto')
+
+    const [githubProject, setGithubProject] = useState<string>(state.language.language == 'English' ? "project's GitHub" : 'Github do projeto')
+
     useEffect(() => {
         if(state.language.language == 'English') {
           setTitle(titleENGUSA)
           setProjectName(projects[index].EnglishTitle)
+          setProjectText(projects[index].EnglishText)
+          setSeeProject('see the project')
+          setGithubProject("project's GitHub")
 
         }else {
           setTitle(titlePTBR)
           setProjectName(projects[index].PortugueseTitle)
+          setProjectText(projects[index].PortugueseText)
+          setGithubProject('ver o projeto')
+          setGithubProject('Github do projeto')
         }
     }, [state.language.language])
 
@@ -84,8 +96,15 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
               <img className={changeSlide} src={projects[index].Img} alt=""/>
             </div>
             <div id="text">
-              <h2>{projectName}</h2>
-              <p>orem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur sed voluptatibus consectetur nisi ut? Quas quo voluptates odio ipsam aliquam dolorem, consequuntur cumque, maiores odit placeat velit vel necessitatibus tenetur.</p></div>
+              <div>
+                <h2>{projectName}</h2>
+                <p>{ProjectText}</p></div>
+                <div id="links">
+                  <a href={projects[index].Deploy} target='_blank'>{seeProject}</a>
+                  <a href={projects[index].Github} target='_blank'>{githubProject}</a>
+                </div>
+                
+              </div>
           </div>
         </ProjectStyle>
     )

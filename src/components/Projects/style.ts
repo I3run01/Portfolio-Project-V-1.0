@@ -149,9 +149,32 @@ export const ProjectStyle = styled.div<Props>`
             margin: 40px 10px auto 10px;
             text-align: justify;
         }
-    }
 
-    
+        #links {
+            width: 100%;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+
+            a {
+                margin: 10px auto auto 10px;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.5em;
+                line-height: 1.5em;
+                text-decoration: none;
+                color: ${props => props.theme == 'dark' ? '#e6e6e6' : '#1c1c1c'};
+                text-align: left;
+
+
+            }
+        }
+
+        
+
+
+    }
 
 
     @media(min-width: 1050px) {
@@ -168,7 +191,6 @@ export const ProjectStyle = styled.div<Props>`
             width: 50%;
             display: flex;
             align-items: center;
-
         }
         
         #text {
@@ -176,6 +198,7 @@ export const ProjectStyle = styled.div<Props>`
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
 
             p {
                 font-size: 2em;
@@ -184,5 +207,10 @@ export const ProjectStyle = styled.div<Props>`
                 line-height: 1.5em;
             }
         }
+
+        #links {
+            margin: 10px auto auto 40px;
+        }
+
     }
 `
