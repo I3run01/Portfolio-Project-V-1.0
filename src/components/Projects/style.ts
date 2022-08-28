@@ -85,7 +85,7 @@ export const ProjectStyle = styled.div<Props>`
     .nextSlide {
         overflow-x: hidden;
             animation-name: nextProjectAnimation;
-            animation-duration: 1s;
+            animation-duration: .5s;
 
             @keyframes nextProjectAnimation {
                 0% {
@@ -111,7 +111,7 @@ export const ProjectStyle = styled.div<Props>`
     .backSlide {
         overflow-x: hidden;
         animation-name: backProjectAnimation;
-        animation-duration: 1s;
+        animation-duration: .5s;
 
         @keyframes backProjectAnimation {
             0% {

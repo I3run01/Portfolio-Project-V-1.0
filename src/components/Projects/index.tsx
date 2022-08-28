@@ -87,14 +87,14 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
 
     const nextSlideFunction = () => {
       setChangeSlide('nextSlide')
-      setTimeout(() =>setIndex(index + 1 >= projects.length ? 0 : index + 1), 500);
-      setTimeout(() => {setChangeSlide('none')}, 1000);
+      setTimeout(() =>setIndex(index + 1 >= projects.length ? 0 : index + 1), 250);
+      setTimeout(() => {setChangeSlide('none')}, 500);
     }
 
     const backSlideFunction = () => {
       setChangeSlide('backSlide')
-      setTimeout(() => setIndex(index - 1 < 0 ? projects.length - 1 : index - 1) , 500);
-      setTimeout(() => {setChangeSlide('none')}, 1000);
+      setTimeout(() => setIndex(index - 1 < 0 ? projects.length - 1 : index - 1) , 250);
+      setTimeout(() => {setChangeSlide('none')}, 500);
     }
  
 
