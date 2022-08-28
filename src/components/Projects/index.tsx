@@ -46,23 +46,23 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
 
     const [ProjectText, setProjectText] = useState<string>(state.language.language == 'English' ? projects[index].EnglishText : projects[index].PortugueseText)
 
-    const [seeProject, setSeeProject] = useState<string>(state.language.language == 'English' ? 'see the project' : 'ver o projeto')
+    const [seeProject, setSeeProject] = useState<string>(state.language.language == 'English' ? 'See the project' : 'Ver o projeto')
 
-    const [githubProject, setGithubProject] = useState<string>(state.language.language == 'English' ? "project's GitHub" : 'Github do projeto')
+    const [githubProject, setGithubProject] = useState<string>(state.language.language == 'English' ? "Project's GitHub" : 'Github do projeto')
 
     useEffect(() => {
         if(state.language.language == 'English') {
           setTitle(titleENGUSA)
           setProjectName(projects[index].EnglishTitle)
           setProjectText(projects[index].EnglishText)
-          setSeeProject('see the project')
-          setGithubProject("project's GitHub")
+          setSeeProject('See the project')
+          setGithubProject("Project's GitHub")
 
         }else {
           setTitle(titlePTBR)
           setProjectName(projects[index].PortugueseTitle)
           setProjectText(projects[index].PortugueseText)
-          setGithubProject('ver o projeto')
+          setGithubProject('Ver o projeto')
           setGithubProject('Github do projeto')
         }
     }, [state.language.language])
@@ -98,13 +98,13 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
             <div id="text">
               <div>
                 <h2>{projectName}</h2>
-                <p>{ProjectText}</p></div>
-                <div id="links">
-                  <a href={projects[index].Deploy} target='_blank'>{seeProject}</a>
+                <p>
+                  {ProjectText} <br />
+                  <a href={projects[index].Deploy} target='_blank'>{seeProject}</a> <br />
                   <a href={projects[index].Github} target='_blank'>{githubProject}</a>
-                </div>
-                
-              </div>
+                </p>
+              </div>  
+            </div>
           </div>
         </ProjectStyle>
     )
