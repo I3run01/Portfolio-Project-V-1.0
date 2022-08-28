@@ -62,7 +62,7 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
           setTitle(titlePTBR)
           setProjectName(projects[index].PortugueseTitle)
           setProjectText(projects[index].PortugueseText)
-          setGithubProject('Ver o projeto')
+          setSeeProject('Ver o projeto')
           setGithubProject('Github do projeto')
         }
     }, [state.language.language])
