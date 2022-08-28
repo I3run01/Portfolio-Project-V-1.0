@@ -96,7 +96,7 @@ export const ProjectStyle = styled.div<Props>`
                     position: absolute;
                     right: 500px;
                     opacity: 0;
-                } 50% {
+                } 51% {
                     position: absolute;
                     right: -500px;
                     opacity: 0;
@@ -122,7 +122,7 @@ export const ProjectStyle = styled.div<Props>`
                     position: absolute;
                     left: 500px;
                     opacity: 0;
-                } 50% {
+                } 51% {
                     position: absolute;
                     left: -500px;
                     opacity: 0;
