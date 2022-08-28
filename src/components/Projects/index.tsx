@@ -24,12 +24,15 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
             Github: 'https://github.com/I3run01/Projeto_Calculo_IMC'
           },
           {
-            EnglishTitle: 'dnv',
-            PortugueseTitle: 'sfdansf',
-            EnglishText: 'This project was a challenge for b7web. In this project, I made a BMI calculator. You put your weight and height and the project will give you your BMI. it shows If you are too slim, normal, or overweight.',
-            PortugueseText: 'Esse projeto foi um desafio do b7web, consiste em uma cálculadora de IMC, ela mostra se você está muito magro, normal ou com sobrepeso.',
-            Img: 'kdjfoeu'      
+            EnglishTitle: 'Keyboard Project',
+            PortugueseTitle: 'Projeto teclado',
+            EnglishText: 'I made a responsive keyboard with just JavaScript, CSS and HTML. If the screen is desktop, the keyboard will have the layout of a desktop keyboard. The opposite is also true, if the screen is of a phone, the keypad will be a telephone keypad.',
+            PortugueseText: "Eu fiz um teclado responsivo apenas com JavaScript, CSS e HTML. Se a tela for de desktop, o teclado terá o layout de um teclado de desktop. O oposto também é verdadeiro, se a tela for de um          telefone, o teclado será de um teclado de telefone.",
+            Img: 'images/ProjectsImages/KeyboardProject.png',
+            Deploy: 'https://i3run01.github.io/Proj-Keyboard/',
+            Github: 'https://github.com/I3run01/Proj-Keyboard'
           },
+          
         ]
 
     //Constants
@@ -68,16 +71,29 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
     }, [state.language.language])
 
     useEffect(() => {
+      if(state.language.language == 'English') {
+        setProjectName(projects[index].EnglishTitle)
+        setProjectText(projects[index].EnglishText)
+      } else {
+        setProjectName(projects[index].PortugueseTitle)
+        setProjectText(projects[index].PortugueseText)
+      }
+
+    }, [index])
+
+    useEffect(() => {
       AOS.init({duration: 1500});
     }, [])
 
     const nextSlideFunction = () => {
       setChangeSlide('nextSlide')
+      setIndex(index + 1 >= projects.length ? 0 : index + 1)
       setTimeout(() => {setChangeSlide('none')}, 1000);
     }
 
     const backSlideFunction = () => {
       setChangeSlide('backSlide')
+      setIndex(index - 1 < 0 ? projects.length - 1 : index - 1)
       setTimeout(() => {setChangeSlide('none')}, 1000);
     }
  
