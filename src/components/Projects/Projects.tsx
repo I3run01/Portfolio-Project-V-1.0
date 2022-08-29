@@ -17,4 +17,13 @@ export const projects = [
         Deploy: 'https://i3run01.github.io/Proj-Keyboard/',
         Github: 'https://github.com/I3run01/Proj-Keyboard'
     },
+    {
+        EnglishTitle: 'B7web Pizzeria Project',
+        PortugueseTitle: 'B7web Projeto Pizzaria',
+        EnglishText: "This project was a challenge from b7web. In this project, I made a mini pizzeria marketplace only with HTML, CSS, and JavaScipt. I worked with JavaScript Poo and some JavaScript animation.",
+        PortugueseText: "Esse projeto foi um desafio do b7web. Eu fiz esse projeto apenas com HTML, CSS e JavaScript. Trabalhei também com OOP em JavaScript e animações em JavaScript.",
+        Img: 'images/ProjectsImages/PizzeriaProject.png',
+        Deploy: 'https://i3run01.github.io/Projeto_Pizza/',
+        Github: 'https://github.com/I3run01/Projeto_Pizza'
+    },
 ]

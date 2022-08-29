@@ -81,8 +81,8 @@ export const Project = ({titleENGUSA, titlePTBR}:Props ) => {
         <ProjectStyle
         theme={state.theme.status}
         scColor={state.secColor.secColorName as string}
-        id='About'>
-          <h1 onClick={nextSlideFunction} >{title}</h1>
+        id={titleENGUSA}>
+          <h1>{title}</h1>
           <div data-aos="fade-up" id="container">
             <div id="img">
               <NextProjectIcon handleChangeSlide={nextSlideFunction}/>

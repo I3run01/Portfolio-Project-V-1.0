@@ -89,21 +89,15 @@ export const ProjectStyle = styled.div<Props>`
 
             @keyframes nextProjectAnimation {
                 0% {
-                    position: absolute;
-                    right: 0px;
-                    opacity: 100%;
+                    transform: scale(100%);
+
                 } 49% {
-                    position: absolute;
-                    right: 500px;
-                    opacity: 0;
+                    transform: scale(0%);
+
                 } 51% {
-                    position: absolute;
-                    right: -500px;
-                    opacity: 0;
+                    transform: scale(0%);
                 } 100% {
-                    position: absolute;
-                    right: 0px;
-                    opacity: 100%;
+                    transform: scale(100%);
                 }
             }
     }
@@ -114,22 +108,14 @@ export const ProjectStyle = styled.div<Props>`
         animation-duration: .5s;
 
         @keyframes backProjectAnimation {
-            0% {
-                    position: absolute;
-                    left: 0px;
-                    opacity: 100%;
+                 0% {
+                    transform: scale(100%);
                 } 49% {
-                    position: absolute;
-                    left: 500px;
-                    opacity: 0;
+                    transform: scale(0%);
                 } 51% {
-                    position: absolute;
-                    left: -500px;
-                    opacity: 0;
+                    transform: scale(0%);
                 } 100% {
-                    position: absolute;
-                    left: 0px;
-                    opacity: 100%;
+                    transform: scale(100%);
                 }
             }
     }
@@ -192,6 +178,58 @@ export const ProjectStyle = styled.div<Props>`
                 margin: auto;
                 line-height: 1.5em;
             }
+        }
+
+        .nextSlide {
+            overflow-x: hidden;
+            animation-name: nextProjectAnimation;
+            animation-duration: .5s;
+
+            @keyframes nextProjectAnimation {
+                0% {
+                    position: absolute;
+                    right: 0px;
+                    opacity: 100%;
+                } 49% {
+                    position: absolute;
+                    right: 500px;
+                    opacity: 0;
+                } 51% {
+                    position: absolute;
+                    right: -500px;
+                    opacity: 0;
+                } 100% {
+                    position: absolute;
+                    right: 0px;
+                    opacity: 100%;
+                }
+            }
+        }
+
+        .backSlide {
+            overflow-x: hidden;
+            animation-name: backProjectAnimation;
+            animation-duration: .5s;
+
+            @keyframes backProjectAnimation {
+                0% {
+                        position: absolute;
+                        left: 0px;
+                        opacity: 100%;
+                    } 49% {
+                        position: absolute;
+                        left: 500px;
+                        opacity: 0;
+                    } 51% {
+                        position: absolute;
+                        left: -500px;
+                        opacity: 0;
+                    } 100% {
+                        position: absolute;
+                        left: 0px;
+                        opacity: 100%;
+                    }
+                }
         }
 
     }
