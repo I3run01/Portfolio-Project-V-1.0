@@ -1,16 +1,24 @@
+import { useContext, useState } from "react"
+import { Context } from "../../contexts/Context"
+
 type Props = {
     handleChangeSlide: () => void
 }
 
 export const NextProjectIcon = ({handleChangeSlide}: Props) => {
 
+    const {state, dispatch} = useContext(Context)
+    const [componentColor, setComponentColor] = useState<string>('black')
+
     return (
-        <svg 
+        <svg
+            onMouseEnter={()=> setComponentColor(state.secColor.secColorName as string)}
+            onMouseLeave={()=> {setComponentColor('black')}}
             onClick={handleChangeSlide}
             id="NextProjectIcon"
             xmlns="http://www.w3.org/2000/svg" version="1.0" width="700pt" height="40pt" viewBox="0 0 791.000000 1167.000000" preserveAspectRatio="xMidYMid meet">
 
-            <g transform="translate(0.000000,1167.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <g transform="translate(0.000000,1167.000000) scale(0.100000,-0.100000)" fill={componentColor} stroke="none">
             <path d="M2170 10301 c-85 -28 -150 -82 -191 -161 -33 -62 -34 -193 -3 -261 66 -143 221 -210 379 -164 46 13 70 28 115 73 72 72 94 131 88 235 -6 118 -65 209 -167 259 -49 24 -173 35 -221 19z"/>
             <path d="M2739 9723 c-78 -26 -140 -80 -179 -157 -32 -62 -35 -77 -35 -150 0 -68 5 -90 28 -138 56 -114 164 -180 292 -180 86 0 155 25 214 78 73 66 104 137 105 240 1 74 -2 87 -34 150 -73 142 -238 209 -391 157z"/>
             <path d="M1573 9692 c-133 -48 -200 -151 -191 -296 8 -116 62 -196 166 -244 47 -21 65 -24 136 -20 118 6 192 53 244 152 35 68 38 186 6 257 -61 133 -223 200 -361 151z"/>
@@ -55,15 +63,20 @@ export const NextProjectIcon = ({handleChangeSlide}: Props) => {
 
 export const BackProjectIcon = ({handleChangeSlide}: Props) => {
 
+    const {state, dispatch} = useContext(Context)
+    const [componentColor, setComponentColor] = useState<string>('black')
+
     return (
         <svg
+            onMouseEnter={()=> setComponentColor(state.secColor.secColorName as string)}
+            onMouseLeave={()=> {setComponentColor('black')}}
             onClick={handleChangeSlide}
             id='BackProjectIcon'
             xmlns="http://www.w3.org/2000/svg" version="1.0" width="1280.000000pt" height="40pt" viewBox="0 0 1280.000000 1888.000000" preserveAspectRatio="xMidYMid meet">
             <metadata>
             Created by potrace 1.16, written by Peter Selinger 2001-2019
             </metadata>
-            <g transform="translate(0.000000,1888.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <g transform="translate(0.000000,1888.000000) scale(0.100000,-0.100000)" fill={componentColor} stroke="none">
             <path d="M9014 16666 c-199 -45 -331 -203 -354 -422 -21 -198 31 -323 188 -456 67 -58 147 -87 259 -95 155 -11 291 36 393 137 111 109 145 205 138 390 -4 104 -7 122 -36 184 -43 92 -142 191 -237 237 -65 31 -78 33 -180 36 -67 1 -134 -3 -171 -11z"/>
             <path d="M8031 15734 c-141 -48 -241 -136 -308 -272 -36 -72 -38 -81 -41 -191 -6 -191 28 -289 138 -402 105 -108 218 -153 381 -152 212 1 383 109 476 300 l38 78 0 136 0 136 -47 95 c-99 199 -258 298 -478 298 -64 0 -103 -7 -159 -26z"/>
             <path d="M9983 15696 c-171 -42 -312 -183 -343 -345 -33 -174 14 -347 125 -457 93 -94 199 -128 375 -122 95 3 111 6 171 36 171 86 259 235 259 436 0 137 -49 255 -137 336 -120 110 -292 154 -450 116z"/>

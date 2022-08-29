@@ -21,6 +21,15 @@ export const ProjectStyle = styled.div<Props>`
         font-weight: lighter;
         font-size: 3em;
         filter: drop-shadow(1px 1px 1px ${props => props.scColor});
+
+        ::after {
+            content: '';
+            width: 200px;
+            height: 4px;
+            background-color: currentColor;
+            display: block;
+            margin: 0 auto;
+        }
     }
    
 
