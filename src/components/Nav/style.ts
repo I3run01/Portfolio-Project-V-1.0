@@ -9,7 +9,6 @@ export const NavSS = styled.nav<Props>`
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik+Dirt&display=swap');
     margin-left: 2vw;
     z-index: 2;
-    
 
     .MenuScroll {
         display: flex;
@@ -38,6 +37,7 @@ export const NavSS = styled.nav<Props>`
         font-weight: 500;
         :hover {
             color: ${props => props.hoverColor};
+            cursor: pointer;
         }
         span {
             font-size: 0.6em;

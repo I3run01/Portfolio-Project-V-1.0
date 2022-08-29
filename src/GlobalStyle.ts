@@ -10,6 +10,10 @@ export const MainDiv = styled.main<Props>`
 
     position: relative;
 
+
+    scroll-behavior: smooth;
+
+
     #menubar {
         position: fixed;
         top: 3vh;

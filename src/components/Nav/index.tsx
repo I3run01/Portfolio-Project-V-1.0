@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-
+import { Link } from "react-scroll"
+import { Link as RouterLink } from "react-router-dom"
 import { NavSS } from "./style"
 import { MenuBarIcon } from "./MenuBarIcon"
 import { useContext, useEffect, useState } from "react"
@@ -124,16 +124,16 @@ export const Nav  = () => {
             <MenuBarIcon MenuScrollAnimation={MenuOpenAndClose}></MenuBarIcon>
             <div 
                 className={`MenuScroll ${menuStatus}`}>
-                <div><a href='#start'>{textStart}</a></div>
-                <div><a href='#About'>{textAbout}</a></div>
-                <div><a href='#Skills'>{textSkills}</a></div>
-                <div><a href='#Projects'>{textProjects}</a></div>
+                <div><Link to='start' spy={true} smooth={true} offset={10} duration={500}>{textStart}</Link></div>
+                <div><Link to='About' spy={true} smooth={true} offset={10} duration={500}>{textAbout}</Link></div>
+                <div><Link to='Skills' spy={true} smooth={true} offset={10} duration={500}>{textSkills}</Link></div>
+                <div><Link to='Projects' spy={true} smooth={true} offset={10} duration={500}>{textProjects}</Link></div>
                 <div onClick={ChangeTheme}>
-                    <Link to='#'>{textTheme}<br /> <span>{textChangeTheme}</span>  </Link></div>
+                    <RouterLink to='#'>{textTheme}<br /> <span>{textChangeTheme}</span></RouterLink></div>
                 <div onClick={ChangeSecColor}>
-                    <Link to='#'>{textSecColor}<br /> <span>{textChangeSecColor}</span> </Link></div>
+                    <RouterLink to='#'>{textSecColor}<br /> <span>{textChangeSecColor}</span> </RouterLink></div>
                 <div onClick={Changelanguage}>
-                    <Link to='#'>{textLanguage}<br /> <span>{textChangeLanguage}</span> </Link></div>
+                    <RouterLink to='#'>{textLanguage}<br /> <span>{textChangeLanguage}</span> </RouterLink></div>
 
             </div>
         </NavSS>
