@@ -1,1 +1,1 @@
-Images whould be 720 pixels x 450 pixels
+Images whould be 16:9
