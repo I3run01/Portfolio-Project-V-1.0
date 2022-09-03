@@ -22,7 +22,6 @@ export const Introduction = () => {
                      <br /> <span> {portfolio} </span>
                      <br /><span id="subtitle">full stack web developer</span></h1>
                 <img src="images/avatar.png" alt="" />
-
         </IntroductionStyle>
     )
 }
