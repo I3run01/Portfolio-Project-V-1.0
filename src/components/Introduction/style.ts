@@ -15,7 +15,6 @@ export const IntroductionStyle = styled.div<Props>`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    //background-attachment: fixed;
     backface-visibility: 80%;
     
 
