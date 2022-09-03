@@ -5,7 +5,7 @@ type Props = {
 }
 
 export const MainDiv = styled.main<Props>`
-    background-color: ${props => props.theme == 'dark' ? '#262626' : '#fffef9'};
+    background-color: ${props => props.theme == 'dark' ? '#141414' : '#fffef9'};
     min-height: 100vh;
 
     position: relative;
