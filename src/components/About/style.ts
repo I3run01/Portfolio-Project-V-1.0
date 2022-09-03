@@ -5,9 +5,16 @@ type Props = {
     scColor:  string
 }
 
+const textLightFontColor = "#fffbfb"
+const textDarkFontColor = "#171717"
+
 export const AboutStyle = styled.div<Props>`
+
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@300&family=Rubik+Dirt&display=swap');
      
+    
+    
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,7 +24,7 @@ export const AboutStyle = styled.div<Props>`
     
     h1 {
         font-family: 'Rubik Dirt', cursive;
-        color: ${props => props.theme == 'dark' ? '#e6e6e6' : '#1c1c1c'};
+        color: ${props => props.theme == 'dark' ? textLightFontColor : textDarkFontColor};
         font-weight: lighter;
         font-size: 3em;
         filter: drop-shadow(1px 1px 1px ${props => props.scColor});
@@ -42,7 +49,6 @@ export const AboutStyle = styled.div<Props>`
 
     img {
         width: 100%;
-        opacity: 80%;
         -webkit-box-shadow: 25px 26px 17px -15px -2px #ABFF99; 
         box-shadow: 25px 26px 17px -15px ${props => props.scColor};   
         border-radius: 20px;
@@ -52,7 +58,7 @@ export const AboutStyle = styled.div<Props>`
         font-family: 'Open Sans', sans-serif;
         font-size: 1.5em;
         line-height: 1.5em;
-        color: ${props => props.theme == 'dark' ? '#e6e6e6' : '#1c1c1c'};
+        color: ${props => props.theme == 'dark' ? textLightFontColor : textDarkFontColor};
         margin: 40px 10px auto 10px;
         text-align: justify;
     }
@@ -68,7 +74,7 @@ export const AboutStyle = styled.div<Props>`
         border: ${props => props.theme == 'dark' ? 'white' : 'black'} solid 2px;
         border-radius: 20px;
         padding: 5px 20px 5px 20px;
-        color: ${props => props.theme == 'dark' ? 'white' : 'black'};
+        color: ${props => props.theme == 'dark' ? textLightFontColor : textDarkFontColor};
         
         :hover {
             background-color: ${props => props.scColor};
